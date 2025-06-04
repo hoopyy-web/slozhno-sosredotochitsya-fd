@@ -204,9 +204,6 @@ img {
 }
 
 @media (min-width: 768px) {
-  .header {
-    min-height: 1024px;
-  }
   .header::before, .footer::before {   
     top: 20px;
     right: 20px;
@@ -220,6 +217,7 @@ img {
     right: 30px;
   }
   .header {
+    min-height: 1024px;
     padding: 192px 20px 183px 20px;
   }
   .header__title {
@@ -274,8 +272,6 @@ img {
   .header__theme-menu-list {
     flex-direction: row;
     justify-content: center;
-  }
-  .header__theme-menu-list {
     gap: 11px;
   }
   .header__title {
@@ -298,5 +294,5 @@ img {
   }
   .footer {
     padding: 272px 20px 279px 20px;
-  } 
+  }
 }
