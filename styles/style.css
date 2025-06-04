@@ -2,4 +2,308 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background: var(--page-background);
+  background-attachment: fixed;
+}
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+.header {
+  height: 100vh;
+  min-height: 668px;
+  position: relative;
+  padding: 10px;
+  padding: 75px 10px 67px 10px;
+  display: grid;
+}
+
+.header::before, .footer::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--text-header-color);
+  border-right: 1px solid var(--text-header-color);
+  top: 10px;
+  right: 10px;
+}
+
+.header::after, .footer::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--text-header-color);
+  border-left: 1px solid var(--text-header-color);
+  bottom: 10px;
+  left: 10px;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--header-title);
+  font-weight: 700;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 97px;
+  padding-top: 65px;
+  padding-bottom: 55px;
+}
+
+.rec {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 13px;
+}
+
+.header__theme-menu-button {
+  font-size: var(--main-font-size);
+  border: none;
+  background-color: transparent;
+  color: var( --text-header-color);
+  padding: 0 13px;
+  font-family: inherit;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid #FF007066;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var( --text-header-color);
+  outline:none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var( --text-header-color);
+}
+
+
+/* main */
+.title-decor {
+  color: var(--title-text-color);
+  background-color: var(--accent-color);
+  font-size: var(--main-font-size);
+  font-weight: var(--text-weight-bold);   
+}
+
+.main {
+  padding: 40px 10px;
+  background-color: var(--main-background-color);
+  display: grid;
+  gap: 50px;
+}
+
+.section__title {
+  color: var(--text-header-color);
+  font-size: var(--main-font-size);
+  margin-bottom: 20px;
+}
+
+.section__article-list {
+  display: grid;
+  gap: 20px;
+}
+
+.section__article-item-title {
+  margin-bottom: 10px;
+}
+
+h4.section__article-item-title {
+  font-weight: 100;
+}
+
+.title-padding {
+  margin-bottom: 20px;
+}
+
+.section__article-item-text {
+  font-size: var(--main-font-size);
+  color: var(--text-color);
+  line-height: 23.4px;
+}
+
+.section__article-item-text-link {
+  text-shadow: 1px 1px 0 var(--accent-color);
+}
+
+.section__article-item-text-link:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.section__article-item-text-link:focus-visible {
+  outline: 1px solid var(--text-color);
+} 
+
+.section__gallery {
+  grid-template-areas:
+  "sunset"
+  "ice-cream"
+  "books"
+  "tape"
+  "street";
+  display: grid;
+  gap: 10px;
+}
+
+.section__gallery img {
+  width: 100%;
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.sunset {
+  grid-area: sunset;
+}
+
+.ice-cream {
+  grid-area: ice-cream;
+}
+
+.tape {
+  grid-area: tape;
+}
+
+.books {
+  grid-area: books;
+}
+
+.street {
+  grid-area: street;
+}
+
+
+
+/* footer */
+
+.footer {
+  position: relative;
+  max-height: 100vh;
+  background-color: var(--main-background-color);
+  padding: 220px 10px 230px 10px;
+  text-align: center;
+}
+
+.footer__tilte {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--header-title);
+  font-weight: 700;
+  text-shadow: 2px 2px 0 var(--accent-color);
+  line-height: 97px;
+  padding-top: 65px;
+  padding-bottom: 55px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    min-height: 1024px;
+  }
+  .header::before, .footer::before {   
+    top: 20px;
+    right: 20px;
+  }
+  .header::after, .footer::after {    
+    bottom: 20px;
+    left: 20px;
+  }
+  .rec {
+    top: 20px;
+    right: 30px;
+  }
+  .header {
+    padding: 192px 20px 183px 20px;
+  }
+  .header__title {
+    padding-top: 176px;
+    padding-bottom: 164px;
+    margin-left: -20px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  p.title-decor {
+    max-width: 364px;
+    justify-self: end;
+  }
+  .main {
+    padding: 60px 20px;
+    gap: 80px;
+  }
+  .section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+  .section-row {
+    grid-template-columns: 1fr;
+  }
+  .section-row .section__title {
+    max-width: 236px;
+    margin-bottom: 0;
+  }
+  .section__gallery {
+    display: grid;
+    grid-template-areas:
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street"
+    "tape street street";
+    gap: 20px;
+  }
+  .footer {
+    padding: 402px 20px 406px 20px;
+  }
+  .footer__tilte {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+}
+
+@media (min-width: 1024px) {
+  
+  .header {
+    min-height: 768px;
+    padding: 20px 20px 135px 20px;
+  }
+  .header__theme-menu-list {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .header__theme-menu-list {
+    gap: 11px;
+  }
+  .header__title {
+    margin-left: -20px;
+    padding-top: 292px;
+    padding-bottom: 130px;
+  }
+  p.title-decor {
+    max-width: 491px;
+  }
+  .section {
+    gap: 10px;
+  }
+  .section-row .section__article-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section-row .section__title {
+    max-width: 315px;
+    margin-bottom: 10px;
+  }
+  .footer {
+    padding: 272px 20px 279px 20px;
+  } 
+
 }

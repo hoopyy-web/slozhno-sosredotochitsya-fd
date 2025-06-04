@@ -2,3 +2,15 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --main-font-family: 'IBM Plex mono', sans-serif;
+  --page-background: url("../images/cover-image-dark.png") no-repeat center / cover;
+  --main-font-size: 18px;
+  --header-title: #DB00FF;
+  --accent-color: #FF0070;
+  --title-text-color: #000028;
+  --text-header-color: #FF0070;
+  --text-weight-bold: 700;
+  --main-background-color: #000028;
+  --text-color: #F1B2CE;
+}
