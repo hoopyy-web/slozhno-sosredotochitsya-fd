@@ -145,8 +145,8 @@ h4.section__article-item-title {
   grid-template-areas:
   "sunset"
   "ice-cream"
-  "books"
   "tape"
+  "books"
   "street";
   display: grid;
   gap: 10px;
@@ -208,7 +208,7 @@ img {
     top: 20px;
     right: 20px;
   }
-  .header::after, .footer::after {    
+  .header::after, .footer::after {
     bottom: 20px;
     left: 20px;
   }
