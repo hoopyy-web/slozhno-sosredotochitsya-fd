@@ -52,7 +52,7 @@
 .rec::after {
   content: '';
   inline-size: 9px;
-  block-size: 9px; 
+  block-size: 9px;
   background-color: transparent;
   box-shadow: none;
   border-radius: 50%;
