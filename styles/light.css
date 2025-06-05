@@ -8,6 +8,7 @@
   --page-background: url("../images/cover-image-light.png") no-repeat center / cover;
   --accent-color: #FF8DCB;
   --header-title: #FFC2E6;
+  --semitransparent-color: #32312D66;
   --text-header-color: #353430;
   --title-text-color: #353430;
   --main-background-color: #FFF1F7;
@@ -17,20 +18,22 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+.theme-light .page {
+  /* Вам также нужно будет написать ряд подобных селекторов */
+}
 .theme-light .rec::before {
   content: '';
 }
 .theme-light .rec::after {
-  content: '';
-}
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+  background-color: transparent;
+  box-shadow: none;
 }
 @media (prefers-color-scheme: light) {
   :root {
     --page-background: url("../images/cover-image-light.png") no-repeat center / cover;
     --accent-color: #FF8DCB;
     --header-title: #FFC2E6;
+    --semitransparent-color: #32312D66;
     --text-header-color: #353430;
     --title-text-color: #353430;
     --main-background-color: #FFF1F7;

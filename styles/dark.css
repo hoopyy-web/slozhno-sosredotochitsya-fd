@@ -12,9 +12,9 @@
   --page-background: url("../images/cover-image-dark.png") no-repeat center / cover;
   --accent-color: #FF0070;
   --header-title: #DB00FF;
+  --semitransparent-color: #FF007066;
   --text-header-color: #FF0070;
   --title-text-color: #000028;
-  --text-weight-bold: 700;
   --main-background-color: #000028;
   --text-color: #F1B2CE;
 }
@@ -25,16 +25,20 @@
 
 .theme-dark .rec::before {
   content: 'REC';
-  font-size: var(--main-font-size);
-  line-height: 25px;
-
 }
+
 .theme-dark .rec::after {
-  content: '';
-  inline-size: 9px;
-  block-size: 9px;
   background-color: var(--accent-color);
   box-shadow: 0 0 4px 2px var(--accent-color);
-  border-radius: 50%;
-  margin-left: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rec::before {
+    content: 'REC';
+  }
+
+  .rec::after {
+    background-color: var(--accent-color);
+    box-shadow: 0 0 4px 2px var(--accent-color);
+  }
 }
